@@ -9,4 +9,8 @@ public class ContaPoupanca extends Conta{
         depositar(juros);
         System.out.println("Juros Atuais: " + juros);
     }
+    @Override
+    public String toString() {
+        return "Conta Poupança" + getContaNumero() + "saldo" + getSaldo();
+    }
 }

@@ -14,18 +14,18 @@ public class Banco {
         return contas;
     }
     public void AtualizarContas() {
-        if (Conta 'c' : contas); {
+        if (Conta 'c' : contas) {
             ContaPoupanca cp = (ContaPoupanca) contas;
             cp.adicionarJuros();
-        }
-        else if (contas instanceof ContaCorrente) {
+
+        } else if (contas instanceof ContaCorrente) {
             ContaCorrente cc = (ContaCorrente) contas;
             if (cc.getSaldo() < 0) {
                 System.out.println("CARTA enviada" + cc.getContaNumero()
-                        + "saldo negativo" + cc.getSaldo();
+                        + "saldo negativo" + cc.getSaldo()','
                 }
         }
-        public void abrirConta(Conta c) {
+        public void abrirConta(Conta contas) {
             contas.add(contas);
         }
 
@@ -33,6 +33,27 @@ public class Banco {
         public void fecharConta(Conta contas) {
             contas.remove(contas);
         }
+        public void Pagardividendo(double valor) {
+            for (Conta conta : contas) {
+                conta.depositar(valor);
+            }
+        }
+        public void atualizarContas(){
+            for (Conta c : contas) {
+                if (c instanceof ContaPoupanca) {
+                    ContaPoupanca cp = (ContaPoupanca) c;
+
+                    cp.adicionarJuros();
+                }
+                else if ( c instanceof ContaCorrente) {
+                    ContaCorrente cc = (ContaCorrente) c;
+
+                    if (cc.getSaldo() < 0) {
+                        System.out.println("CARTA enviada" + cc.getContaNumero()
+                        + ":saldo negativo" + cc.getSaldo());
+                    }
+                }
+            }
         }
     }
 }
